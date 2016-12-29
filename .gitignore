@@ -29,12 +29,10 @@ node_modules
 target/*
 
 gulpfile.js
-tmpdist
-tmpZipFolder/
-
+tmpZipFolder
 .sass-cache
 
-/ime_sprites/images/*.png
 test.html
 
 build/comlib/
+build/config.json
