@@ -1,0 +1,154 @@
+<div id="mod-login" class="mod-login main">
+    <div class="change-mode" onselectstart="return false"></div>
+    <div class="change-mode-text" onselectstart="return false"></div>
+    <div class="container-main">
+        <img class="login-logo" src="{{logoImg}}" />
+        <div id="login-wrap" class="login-wrap">
+            <div class="panel-wrap">
+                <div class="block phone-panel">
+                    <div class="icon-wrap">
+                        <em class="iconfont if-mobile"></em>
+                    </div>
+                    <div class="input-wrap">
+                        <input class="login-input" type="tel" name="mobile" maxlength="17" placeholder="输入手机号码" tabindex="1" autocomplete="off">
+                        <!-- <button class="send-btn" type="button" disabled>发送验证码</button> -->
+                    </div>
+                </div>
+            </div>
+            <div id="sp-error1" class="sp-error"></div>
+            <div id="login-slider-one" class="login-slider-one">
+                <div class="geetest-wrap">
+                    <p class="geetest-tip">拖动滑块完成验证</p>
+                    <div id="geetest-container" class="geetest-container"></div>
+                </div>
+                <div id="geetest-error" class="sp-error"></div>
+                <div id="login-change-tips" class="login-change-tips"><a class="login-change-tips-con" id="login-geetest-tips">无法验证？点此使用字符验证</a></div>
+            </div>
+            <div class="slider-wrap">
+                <div id="login-slider-two" class="login-slider-two">
+                    <div id="login-imgcode-panel">
+                        <div class="panel-wrap">
+                            <div class="block imgcode-panel">
+                                <div class="icon-wrap">
+                                    <em class="iconfont if-shield"></em>
+                                </div>
+                                <div class="input-wrap">
+                                    <input id="valiedate-input" class="login-input valiedate-input" type="tel" name="imgcode" maxlength="4" placeholder="输入右边字符" tabindex="1" autocomplete="off">
+                                    <img id="login-validate-img" class="validate-img" src="" alt="">
+                                    <!-- <button class="send-btn" type="button" disabled>发送验证码</button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sp-error2" class="sp-error"></div>
+                    </div>
+                    <div id="login-code-panel">
+                        <div class="panel-wrap">
+                            <div class="block code-panel">
+                                <div class="icon-wrap">
+                                    <em class="iconfont if-email"></em>
+                                </div>
+                                <div class="input-wrap">
+                                    <input class="login-input" type="tel" maxlength="4" name="code" autocomplete="off" placeholder="填写验证码" tabindex="2">
+                                    <button id="send-code-btn" class="send-btn" type="button" disabled>发送验证码</button>
+                                    <button id="send-voice-btn" class="send-voice-btn" type="button">没收到？</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sp-error3" class="sp-error"></div>
+                        <div class="smscode-tips">校验码已发送至你的手机，请查收</div>
+                        <div class="voice-tips">还没收到短信验证码？点击“没收到”接听来自1010-6622的电话获取验证码</div>
+                    </div>
+                </div>
+            </div>
+            
+<!-- 
+            <div class="block code-panel">
+                <div class="icon-wrap">
+                    <em class="iconfont if-mail"></em>
+                </div>
+                <div class="input-wrap">
+                    <input class="login-input" type="tel" maxlength="4" name="code" autocomplete="off" placeholder="填写验证码" tabindex="2">
+                    <button class="send-voice-btn" type="button">没收到？</button>
+                </div>
+            </div> -->
+            <!-- <div class="voice-tips">还没收到短信验证码？点击“没收到”接听来自1010-6622的电话获取验证码</div>
+            <div class="error"></div> -->
+            <!-- <div class="mod-login-item">
+                
+            </div> -->
+
+
+            <!-- <div class="mod-login-item mod-login-geetest">
+                <div class="login-change-tips"><a class="login-change-tips-con" id="login-geetest-tips">无法验证？点此使用字符验证</a></div>
+                <div id="geetest-container" class="login-geetest-inner"></div>
+            </div>
+            <div class="mod-login-item mod-login-validate">
+                <div class="login-change-tips"><a class="login-change-tips-con" id="login-validate-tips">使用图形验证</a></div>
+                <div>
+                    <div class="validate-img-content">
+                        <img class="validate-img" src="" />
+                        <a id="validate-change-img" href="#">换一张</a>
+                    </div>
+                    <input class="login-input valiedate-input" type="tel" maxlength="4" placeholder="输入上图中字符，不区分大小写" tabindex="1" autocomplete="off">
+                </div>
+                <div class="error"></div>
+                <div class="block login-panel">
+                    <button class="mod-login-validate-btn" type="button" disabled tabindex="3">提交</button>
+                </div>
+            </div> -->
+
+
+            
+            <!-- div class="block register-panel">
+            <span class="block-left">&nbsp;</span>
+            <span class="block-right">
+            <label class="mod-check-box checked">
+            <input type="checkbox"/>同意<a href="/protocol/u/" target="_blank">《爱屋吉屋软件许可及服务协议》</a>
+            </label>
+            <button class="dialog-register-btn" type="button" url="/register.action" disabled tabindex="3">注册</button>
+            </span>
+            </div -->
+        </div>
+        <!-- <div class="login-change-tips"><a class="login-change-tips-con" id="login-geetest-tips">无法验证？点此使用字符验证</a></div> -->
+        <div class="login-footer">   
+            <div class="block login-panel">
+                <button class="dialog-login-btn" type="button" disabled tabindex="3">登录</button>
+            </div>
+            <div class="tip">
+                温馨提示：未注册爱屋吉屋账号的手机号，登录时将自动注册，且代表您已同意<a href="/protocol/u/" target="_blank">《爱屋吉屋用户协议》</a>
+            </div>
+        </div>
+    </div>
+    <!-- <div style="text-align: center;">
+        <button id="click-it">click me!</button>
+    </div> -->
+    <div class="container-scan">
+        <div class="title">APP扫码，便捷登录</div>
+        <div class="content">
+            <div class="scan">
+                <img src="" data-role="QRCode">
+                <div class="overtime">
+                    <div class="shadow"></div>
+                    <div class="text">二维码已过期</div>
+                    <div class="btn">点击刷新</div>
+                </div>
+            </div>
+            <div class="phone"></div>
+        </div>
+        <div class="ftip">使用爱屋吉屋APP扫描二维码登录</div>
+        <a href="/appDownPage/" target="_blank" class="link">
+            <em class="iconfont fo-down">&#xd622;</em>下载爱屋吉屋APP
+        </a>
+    </div>
+    <div class="container-prelogin">
+        <div class="title">APP扫码，便捷登录</div>
+        <div class="content">
+            <em class="iconfont">혎</em>
+            <div class="img_text">扫码成功</div>
+            <div class="ptip">请在手机上确认登录</div>
+        </div>
+        <a href="javascript:;" class="link">返回二维码登录</a>
+    </div>
+</div>
+
+

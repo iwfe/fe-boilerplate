@@ -1,0 +1,80 @@
+ {{if tplType == 'houseItem'}}
+ <li id="{{house.houseId}}"
+     class="mod-list-item clearfix {{options.itemClass}} {{house.itemClass}}"
+     data-house-id="{{house.houseId}}" data-house-code="{{house.houseCode}}"
+     data-house-type="{{house.houseType}}"
+     {{#house.itemDataTpl}}>
+     {{if options.showCheckbox}}<div class="list-select"><label class="mod-check-box check-self"><input type="checkbox" name="houseSel{{i}}"/></label></div>{{/if}}
+     <div class="list-info">
+         <a href="/{{house.houseDetailUrl}}" alt="{{house.estateName}}" class="house-a"  {{if options.isBlank}}target="_blank"{{/if}}>
+             <img src="{{loadingImg}}" data-src="{{house.pic}}" class="house-img" data-need-resize = "auto">
+             {{if options.invalTag || house.invalTag}}
+                 <em class="inval-status"></em>
+             {{else}}
+                 {{if house.hasVideo && house.videoType == 0}}
+                 <em class = "video-btn"><img src = "{{videoBtnImg}}"> </em>
+                 {{/if}}
+                 {{if house.hasVideo && house.videoType == 1}}
+                 <em class = "video-btn para-video-btn"><img src = "{{paraVideoBtn}}"> </em>
+                 {{/if}}
+                 {{#house | houseDJLabel}}
+             {{/if}}
+         </a>
+         <div class="list-info-r">
+             <h3 class="house-title need-cut" data-name="{{house.estateName}}">
+                <a class="house-title-a" href="/{{house.houseDetailUrl}}" alt="{{house.estateName}}" title = "{{house.estateName}}" {{if options.isBlank}}target="_blank"{{/if}}>
+                    {{if house.houseType == 2}}
+                        <i>{{house.estateName}}
+                        {{house.floorTypeOnTitle}}
+                        {{house.bedroomSum}}室
+                        {{house.spaceArea}}平
+                        {{if house.orientation}}朝{{house.orientation}}{{/if}}</i>
+                    {{else}}
+                        <i class="house-item-title">{{house.estateName}} </i>
+                        <i class="house-item-unit"><em class="bedroom-num">{{house.bedroomSum}}</em>室<em class="liveroom-num">{{house.livingRoomSum}}</em>厅<em class="wc-num">{{house.wcSum}}</em>卫</i>
+                        <i class="house-item-area"><em class="space-area"> {{house.spaceArea}}</em>m²</i>
+                    {{/if}}
+                </a>
+              </h3>
+              <p class="house-detail">
+                {{if house.houseType==2}}
+                    <i class="house-info">{{house.bedroomSum}}室{{house.livingRoomSum}}厅{{house.wcSum}}卫</i>
+                    {{if house.floorStr}}<i class="house-info house-floor">{{house.floorStr}}</i>{{/if}}
+                    {{if house.elevatorNum > 0 ||  house.numPerFloor > 0}}
+                    <i class="house-info">
+                        {{if house.elevatorNum > 0 && house.numPerFloor > 0}}
+                          {{house.elevatorNum}}梯{{house.numPerFloor}}户
+                        {{else if house.elevatorNum > 0}}
+                          每层{{house.elevatorNum}}梯
+                        {{else}}
+                          每层{{house.numPerFloor}}户
+                        {{/if}}
+                    </i>
+                    {{/if}}
+                    {{if house.contract >0}}<i class="house-info">{{house.contract}}年建造</i>{{/if}}
+                {{else}}
+                    {{if house.floorStr}}<i class="house-info house-floor">{{house.floorStr}}</i>{{/if}}
+                    {{if house.decorateTypeStr}}<i class="house-info house-decorate">{{house.decorateTypeStr}}</i>{{/if}}
+                    {{if house.contract >0}}<i class="house-info">{{house.contract}}年建造</i>{{/if}}
+                {{/if}}
+              </p>
+             <p class="house-address">{{house.cityName}} - {{house.townName}} {{house.subEstateName}}</p>
+             <p class="house-feature">{{#house | houseLabel: "complete"}}</p>
+         </div>
+     </div>
+     <div class="list-detail">
+
+         <div class="house-item-price">
+             {{if priceExtendTpl}}
+                  {{#priceExtendTpl}}
+             {{else}}
+                 <span class="price-total"><b class="price-num">{{house.price}}</b>{{if house.houseType == 1}}元/月{{else}}万{{/if}}</span>
+                 {{if house.houseType != 1}}<p class="price-avg">{{house.unitPrice}}</p>{{/if}}
+             {{/if}}
+         </div>
+     </div>
+     {{if options.operateTpl}}
+         <div class="list-operate">{{#operateTpl}}</div>
+     {{/if}}
+ </li>
+{{/if}}

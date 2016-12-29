@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../server/lib/server.min.css">
+        <link rel="stylesheet" href="http://resource.iwjw.com/global/common_2.0.css">
+        <!-- <link rel="stylesheet" href="../../dist/upload.css"> -->
+        <link rel="stylesheet" href="http://resource.iwjw.com/global/responsiveslide_2.0.css">
+        <script type="text/javascript" src="../server/lib/server.min.js"></script>
+        <script type="text/javascript" src="../dist/common.js"></script>
+        <!-- <script type="text/javascript" src="http://resource.iwjw.com/global/common_2.0.js"></script> -->
+        <script type="text/javascript" src="http://resource.iwjw.com/global/responsiveslide_2.0.js"></script>
+        <!-- <script type="text/javascript" src="http://iwjw-resource.oss.aliyuncs.com/global/responsiveslide_2.0.js"></script> -->
+        <script src="../dist/responsiveslide.js"></script>
+    </head>
+    <body>
+
+        <script>
+            // asset的数据结构：
+            // ［
+            //      {
+            //          title: '图片说明',
+            //          type: 'image',
+            //          content: '123.jpg'
+            //      }, 
+            //      {
+            //          title: '图片说明',
+            //          type: 'video',
+            //          content: '456.jpg'
+            //      },
+            //      {
+            //          title:'文字说明',
+            //          type:'txt',
+            //          content:'这是文字内容'
+            //      },
+            //      {
+            //          title:'文字说明',
+            //          type:'txt',
+            //          content:'img2.jpg'
+            //      }
+            //  ］
+            $(function(){
+                window.IWJW.responsiveslide({
+                    startIndex:1,
+                    autoGenerateHtml:true,
+                    asset: [{},{}],
+                    isSupportKeyboard:true,
+                    tip:{
+                        active:true,
+                        message:'键盘←、→可查看上（下）一张图片~'
+                    },
+                    pagination:{
+                        active:true
+                    },
+                    callBack:{
+                        closeCallback:function(data){
+
+                        }
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>

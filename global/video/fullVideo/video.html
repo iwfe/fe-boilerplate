@@ -1,0 +1,20 @@
+<div class="mod-video">
+    <div class="video-loading"><img class="loading-img" src="{{loadingImg}}" /></div>
+    {{if hasFDVideo}}
+    <div class="video-wrap FDVideo-wrp">
+        <div class="video-player-wrap">
+            <iframe id="iwVrVideo" style="width: 100%; height: 100%; border: 0px;" scrolling="no" frameborder="0"  marginheight="0" marginwidth="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            <div class="video-player-fullclose"></div>
+        </div>
+
+        {{if isFirstPanoramic}}
+        <div class="fullvideo-guide" style="background: url({{FD_firstImg}});">
+            <div class="guide-shadow"></div>
+            <p class="text">在画面上自由拖动，可360度全方位观看房源</p>
+            <div class="panaroma-guide-img"><img src="{{panaromaGuideImg}}"></div>
+            <div class="btn-iknow">我知道了</div>
+        </div>
+        {{/if}}
+    </div>
+    {{/if}}
+</div>

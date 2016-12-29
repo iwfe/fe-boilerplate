@@ -1,0 +1,233 @@
+/*
+* @Author: liyaping
+* @Date:   2015-09-29 16:51:35
+* @Email:  liyaping@superjia.com
+* @Last Modified by:   yuqy
+* @Last Modified time: 2016-10-18 10:56:40
+*/
+.mod-list-item {
+    position: relative;
+    color: #757575;
+    padding: 24px 0;
+    border-top: 1px dashed #e5e5e5;
+}
+
+.house-dj {
+    width: 34px;
+}
+
+.video-btn {
+    width: 32px;
+    height: 32px;
+    margin: -20px 0 0 -20px;
+}
+.para-video-btn{
+    width: 40px;
+    height: 22px;
+}
+
+.list-info {
+    float: left;
+    position: relative;
+}
+
+.house-a {
+    float: left;
+    overflow: hidden;
+    width: 180px;
+    height: 120px;
+}
+
+.list-info-r {
+    float: left;
+    width: 500px;
+    margin-left: 16px;
+}
+
+.house-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 100%;
+    // height: 24px;
+    color: #212121;
+}
+.house-title-a{
+    font-weight: bold;
+}
+
+.house-detail,
+.house-address,
+.house-feature {
+    white-space: nowrap;
+    line-height: 20px;
+    padding-top: 5px;
+}
+
+.house-address {
+    font-size: 14px;
+    height: 16px;
+}
+
+.house-detail {
+    font-size: 0;
+    line-height: 1;
+}
+
+.house-feature {}
+
+.list-detail {
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+    font-size: 0;
+}
+
+.list-operate {
+    position: absolute;
+    right: 0;
+    width: 72px;
+    text-align: right;
+    bottom: 20px;
+}
+
+.operate-more {
+    position: absolute;
+    bottom: 28px;
+    right: 0;
+    padding: 0 10px;
+    display: none;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.house-info {
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    color: #212121;
+    padding: 0 8px;
+    position: relative;
+    &:before {
+        content: '•';
+        display: inline-block;
+        // border-left: 1px solid #dedede;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        left: -2px;
+        margin-top: -7px;
+    }
+    &:first-child {
+        padding-left: 0;
+        &:before {
+            content: '';
+            // border-left: 0;
+        }
+    }
+}
+
+
+/*
+[class^="house-info-"],
+[class*=" house-info-"] {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    text-align: center;
+    padding: 0 10px;
+    min-width: 74px;
+    border-left: 1px solid #dedede;
+}
+
+[class^="house-info-"]:first-child,
+[class*=" house-info-"]:first-child {
+    border-left: 0;
+    padding-left: 0;
+}*/
+
+.bedroom-num,
+.liveroom-num,
+.wc-num,
+.space-area {
+    font-size: 20px;
+    padding: 0;
+}
+
+// .house-floor {
+//     min-width: 100px;
+// }
+.house-item-price {
+    font-size: 16px;
+    position: relative;
+    text-align: right;
+}
+
+.price-total {
+    color: #e84a01;
+}
+
+.price-num {
+    font-size: 28px;
+    padding: 0 4px;
+    line-height: 1;
+}
+
+.price-avg {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 6px;
+    color: #212121;
+}
+
+.house-feature {
+    position: absolute;
+    bottom: 0;
+}
+
+.fo-loc,
+.fo-sub {
+    font-size: 14px;
+    margin-right: 8px;
+    top: -1px;
+    color: #bdbdbd;
+}
+
+.inval-status {
+    // color: #fff;
+    // line-height: 20px;
+    // height: 20px;
+    // background: #494949;
+    // filter: Alpha(opacity=90);
+    // opacity: 0.9;
+    // width: 100%;
+    // text-align: center;
+    // font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -14px 0 0 -35px;
+    width: 69px;
+    height: 30px;
+    display: none;
+    background: url(./img/dealed.png);
+}
+
+
+/*同时关注小区*/
+
+.follow-success-wrap {
+    text-align: center;
+}
+
+.simul-follow {
+    color: #757575;
+    font-size: 16px;
+    margin-bottom: 48px;
+}
+
+.follow-success {
+    margin-bottom: 16px;
+}

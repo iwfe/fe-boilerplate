@@ -1,0 +1,161 @@
+/**
+ * Created by zyy on 15/5/26.
+ * zhangyuyu@superjia.com
+ */
+.mod-search{
+    position: relative;
+}
+
+.mod-search .hint-wrapper{
+     display: none;
+    top: 60px;
+    left: 0;
+    width: 378px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    border-radius: 2px;
+    z-index: 971;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.mod-search
+
+.mod-search .hint-wrap .hint-item {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    display: block;
+    padding: 0 6px;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.mod-search .hint-wrap .hint-item.active,
+.mod-search .hint-wrap .hint-item:hover {
+    background: #f5f5f5;
+}
+
+.mod-search .hint-item .iconfont {
+    font-size: 14px;
+    padding: 0;
+    color: #747E89;
+    padding-right: 6px;
+}
+
+.mod-search .hint-item .txt-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.mod-search .hint-item .key-txt{
+    white-space: nowrap
+}
+
+.mod-search .hint-item .key-estate{
+    color: #777;
+    margin-left: 4px;
+}
+
+.mod-search .hint-item.active .key-txt {
+    font-weight: bold;
+}
+
+.mod-search .hint-item .tip-txt {
+    color: #ccc;
+    padding-left: 8px
+}
+
+.mod-search .sr-d-wrap {
+    position: relative;
+    width: 420px;
+    height: 48px;
+    display: inline-block;
+    border: 0;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.mod-search .search-close {
+    position: absolute;
+    right: 4px;
+    top: 0;
+    font-size: 30px;
+    color: #dfdfdf;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+    background-color: #fff;
+}
+
+.mod-search .key-housenum {
+    right: 6px;
+    position: absolute;
+    color: #bdbdbd;
+}
+
+.search-mobile .hint-item .iconfont {
+    color: rgb(116, 126, 137)
+}
+.search-mobile .hint-wrap{
+    box-shadow: 0 0.01rem 0.03rem rgba(0,0,0,.3);
+}
+
+.search-mobile .search-close {
+    top: 0.14rem;
+    right: 0.69rem;
+    font-size: 0.22rem;
+    height: 0.2rem;
+    line-height: 0.2rem;
+}
+
+.search-mobile .hint-wrap .hint-item{
+    border-bottom: 0.01rem solid #e5e5e5;
+    padding: 0.07rem 0;
+    margin: 0 0.16rem;
+    color: #757575;
+    height: auto;
+    margin-left: 0.06rem;
+    padding-right: .35rem;
+}
+
+.search-mobile .hint-wrap .hint-item.active, .search-mobile .hint-wrap .hint-item:hover {
+    background: transparent;
+}
+
+.search-mobile .hint-item .iconfont{
+    font-size: 0.16rem;
+}
+.search-mobile .hint-item .key-txt {
+    display: block;
+    line-height: 0.2rem;
+    color: rgb(116, 126, 137);
+    font-size: 0.16rem;
+}
+.search-mobile .bold{
+    font-weight: bold;
+}
+.search-mobile .hint-item .key-txt-down {
+    display: block;
+    line-height: 0.2rem;
+    font-size: 0.12rem;
+    color: #bdbdbd;
+}
+
+.search-mobile .search-load {
+    font-size: 0.16rem;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.search-mobile img{
+    position: relative;
+    top: 5px;
+    width: 30px;
+    margin-top: 5px;
+}

@@ -1,0 +1,8 @@
+/*覆盖大图组件的视频样式*/
+.slide-content-wrap {
+    .player-bigmodel{
+        .video-control-wrap {
+            bottom: 0px !important;
+        }
+    }
+}

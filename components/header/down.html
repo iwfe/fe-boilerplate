@@ -1,0 +1,69 @@
+{{if type == 'message-down'}}
+    {{if specialMessageDown}}
+    <div data-url = "/message/activity/" class="arrow-top login-require cart-tips cart-tips-message">消息</div>
+    {{else}}
+    <div class="message-down-wrap arrow-top nav-down-wrap"> 
+        <a class="user-item activity"  href="/message/activity">
+            <span class="mid-dot">&middot;</span>活动
+            <span class="user-num {{if data.activityNum <= 0}}hide{{/if}}">
+              {{if data.activityNum > 0 && data.activityNum <= 99}}
+              {{data.activityNum}}
+              {{else}}
+              99+
+              {{/if}}
+            </span>
+        </a> 
+        <a class="user-item notice"  href="/message/notice">
+            <span class="mid-dot">&middot;</span>资讯 
+            <span class="user-num {{if data.noticeNum <= 0}}hide{{/if}}">
+              {{if data.noticeNum > 0 && data.noticeNum <= 99}}
+              {{data.noticeNum}}
+              {{else}}
+              99+
+              {{/if}}
+            </span>
+        </a> 
+        <a class="user-item remind" href="/message/remind">
+            <span class="mid-dot">&middot;</span>提醒 
+            <span class="user-num {{if data.remindNum <= 0}}hide{{/if}}">
+            {{if data.remindNum > 0 && data.remindNum <= 99}}
+            {{data.remindNum}}
+            {{else}}
+            99+
+            {{/if}}
+            </span>
+        </a> 
+    </div>
+    {{/if}}
+{{/if}}
+
+{{if type == 'mine-down'}}
+<div class="user-down-wrap arrow-top nav-down-wrap"> 
+   {{each data as item}} 
+   <a {{if newTab}} target="_blank" {{/if}} class="user-item user-item-{{item.key}}" {{if item.url}}href="{{item.url}}/"{{/if}}>
+       <span class="mid-dot">&middot;</span>{{item.txt}}
+       {{if item.key == "payorder" && user.billNum.length>0}}
+       <span class="user-order-num user-num">{{user.billNum}}</span>
+       {{/if}}
+   </a> 
+   {{/each}} 
+</div>
+{{/if}}
+
+{{if type == 'trip-down'}}
+<div class="trip-down-wrap arrow-top nav-down-wrap"> 
+   <a class="user-item appoint-list login-require" data-url="/seeHouseList/" id = "Itinerary">
+       <span class="mid-dot">&middot;</span>约看清单 
+       {{if user.ykNum > 0}}
+       <span class="user-num">{{user.ykNum}}</span>
+       {{/if}}
+   </a>
+   <a class="user-item house-schedule login-require" data-url="/appointmentList/" id = "Showings">
+       <span class="mid-dot">&middot;</span>看房日程
+       {{if user.kfNum > 0}}
+       <span class="shape-circle"></span>
+       {{/if}}
+   </a>
+</div>
+{{/if}}
+

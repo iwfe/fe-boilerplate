@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../../iwjw-server/lib/server.min.css">
+    <!-- <link rel="stylesheet" href="http://iwjw-resource.oss.aliyuncs.com/global/common_2.0.css"> -->
+    <link rel="stylesheet" href="../../iwjw-server/dist/common.css">
+    <!-- <link rel="stylesheet" href="http://iwjw-resource.oss.aliyuncs.com/global/iwvideo_2.0.css"> -->
+    <link rel="stylesheet" href="../../iwjw-server/dist/iwvideo.css">
+    <link href="./video-js.min.css" rel="stylesheet">
+    <script src="./video.min.js"></script>
+    <link href="http://vjs.zencdn.net/5.0/video-js.min.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/5.0/video.min.js"></script>
+</head>
+
+<body>
+    <div id="test" style="width: 400px;height: 300px;"></div>
+    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered" controls="" width="640" height="264">
+        <source src="http://200000677.vod.myqcloud.com/200000677_d46dc254d7c411e5b8b941c99c406b7a.f30.mp4" type="video/mp4" />
+    </video>
+</body>
+<script type="text/javascript" src="../../iwjw-server/lib/server.min.js"></script>
+<script type="text/javascript" src="../../iwjw-server/dist/common.js"></script>
+<!-- <script type="text/javascript" src="http://resource.iwjw.com/global/common_2.0.js"></script> -->
+<!-- <script type="text/javascript" src="http://iwjw-resource.oss.aliyuncs.com/global/common_2.0.js"></script> -->
+<!-- <script type="text/javascript" src="http://iwjw-resource.oss.aliyuncs.com/global/iwvideo_2.0.js"></script> -->
+<script type="text/javascript" src="../../iwjw-server/dist/iwvideo.js"></script>
+<script type="text/javascript">
+var player = videojs('example_video_1', {
+    techOrder: ['flash'],
+}, function() {
+    console.log('Good to go!');
+
+    this.play(); // if you don't trust autoplay for some reason
+
+    //How about an event listener?
+    this.on('ended', function() {
+        console.log('awww...over so soon?');
+    });
+});
+var a = 'http://200000677.vod.myqcloud.com/200000677_d46dc254d7c411e5b8b941c99c406b7a.f30.mp4';
+new IWJW.iwVideo($('#test'), {
+    autoPlay: true,
+    fullscreenSupport: true,
+    // rootEle: d.element,
+    successCallback: function() {
+        // self.playernow = true;
+    },
+    errorCallback: function() {
+
+    },
+    fullscreenCallback: function(data) {
+
+    },
+    //src: 'http://v.youku.com/v_show/id_XMTMyODI4MTk4NA==.html'
+    src: 'http://200000677.vod.myqcloud.com/200000677_d46dc254d7c411e5b8b941c99c406b7a.f30.mp4'
+        // src: pageConfig.detail.houseUrl
+});
+</script>
+
+</html>

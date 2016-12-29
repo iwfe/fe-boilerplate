@@ -1,0 +1,30 @@
+/**
+ * checkbox
+ * Created by lancui on 2015/7/13.
+ * lancui@superjia.com
+ */
+
+.mod-check-box {
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.mod-check-box input {
+    display: none;
+}
+
+.mod-check-box .iconfont {
+    color: #808080;
+    font-size: 16px;
+    font-size: 0.16rem;
+    line-height: 1;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.mod-check-box.checked .iconfont {
+    color: #e84a01;
+}

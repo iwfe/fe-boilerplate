@@ -1,0 +1,31 @@
+/**
+ * Created by liyaping on 2015/07/08.
+ * liyaping@superjia.com
+ */
+
+[class^="gicon-"],
+ [class*=" gicon-"] {
+     display: inline-block;
+     background: url(gicon.png) no-repeat;
+ }
+
+.gicon-logo {
+    background-position: 0 0;
+    width: 120px;
+    height: 35px;
+}
+
+.gicon-subway-nav {
+    height: 28px;
+    width: 20px;
+    vertical-align: middle;
+    background-position: -160px -0px;
+}
+
+.gicon-subway-nav-first {
+    background-position: -140px 0;
+}
+
+.gicon-subway-nav-last {
+    background-position: -180px 0;
+}

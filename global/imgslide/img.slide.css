@@ -1,0 +1,81 @@
+/**
+ * Created by liyaping on 2015/7/20.
+ * liyaping@superjia.com
+ */
+
+.pic-slide-wrap {
+    position: relative;
+}
+
+.pic-slide-wrap .iconfont {
+    position: absolute;
+    font-size: 24px;
+    line-height: 24px;
+    top: 50%;
+    margin-top: -12px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.pic-slide-wrap .iconfont:hover {
+    color: #b5b5b5;
+}
+
+.pic-slide-wrap .pic-left {
+    left: -24px;
+}
+
+.pic-slide-wrap .pic-right {
+    right: -24px;
+}
+
+.pic-wrap {
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+}
+
+.pic-slide {
+    position: absolute;
+    left: 0;
+}
+
+.slide-item {
+    float: left;
+    width: 200px;
+    height: 120px;
+    margin-left: 30px;
+}
+
+.slide-item.ml0 {
+    margin-left: 0;
+}
+
+.house-a, .house-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#youkuPlayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.page-tag{
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: #fff;
+}
+.slide-item .para-video-btn{
+    width: 34px;
+    height: 20px;
+}

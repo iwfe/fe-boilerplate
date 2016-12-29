@@ -1,0 +1,104 @@
+/*
+* @Author: enzo
+* @Date:   2016-01-13 10:32:06
+* @Last Modified by:   wangnani
+* @Last Modified time: 2016-05-20 10:55:41
+*/
+
+.suspend-wrap {
+    position: fixed;
+    right: 16px;
+    bottom: 64px;
+    text-align: center;
+    z-index: 888;
+    .suspend-div {
+        width: 48px;
+        height: 48px;
+        color: #fff;
+        z-index: 2;
+        position: relative;
+        border-top: 1px solid #fff;
+        cursor: pointer;
+
+        .iconfont {
+            display: block;
+            line-height: 46px;
+            font-size: 25px;
+            color: #fff;
+        }
+
+        &:first-child {
+            border: none;
+            display:block;
+        }
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+
+    .suspend-back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        opacity: .7;
+        background: #212121;
+        top:0;
+        left: 0
+    }
+
+    .suspend-report{
+        .text {
+            display: none;
+            color: #fff;
+            line-height: 48px;
+        }
+
+        &:hover .text{
+            display: block;
+        }
+
+        &:hover .iconfont{
+            display: none;
+        }
+    }
+
+    .suspend-code {
+        .code-content {
+            position: absolute;
+            width: 144px;
+            height: 168px;
+            padding: 14px;
+            background-color: #fff;
+            right: 48px;
+            top: -148px;
+            display: none;
+            color: #757575;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 16px;
+                right: -7px;
+                border-width: 5px 0 5px 7px;
+                border-style: solid;
+                border-color: transparent #fff;
+                display: block;
+                width: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &:hover .code-content {
+            display: block;
+        }
+    }
+
+    .suspend-top {
+        display: none;
+    }
+}

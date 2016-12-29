@@ -1,0 +1,28 @@
+        location ~* /iwjw-([\w-]*)_(?:\w*)/(.*)_\d.*.(css|js){
+            add_header Access-Control-Allow-Origin *;
+            alias  /Users/liyaping/work/git/static/iwjw-$1/dist/$2.$3;
+        }
+
+        location ~* /iwjw-([\w-]*)_(?:\w*)/(.*){
+            add_header Access-Control-Allow-Origin *;
+            alias  /Users/liyaping/work/git/static/iwjw-$1/dist/$2;
+        }
+
+        location ~* /iwjw-([\w-]*)/(.*)_\d.*.(css|js){
+            add_header Access-Control-Allow-Origin *;
+            alias  /Users/liyaping/work/git/static/iwjw-$1/dist/$2.$3;
+        }
+
+        location ~* /iwjw-([\w-]*)/(.*){
+            add_header Access-Control-Allow-Origin *;
+            alias  /Users/liyaping/work/git/static/iwjw-$1/dist/$2;
+        }
+
+
+// host
+
+192.168.1.239 pc.iwjwtest.com
+127.0.0.1     resource.iwjw.com
+127.0.0.1     house-test-water.oss.aliyuncs.com
+127.0.0.1     s0.iwjwdev.com
+127.0.0.1     pc.iwjwdev.com

@@ -1,0 +1,37 @@
+$color-21:#212121;
+.guide-l-mask{
+    width:100%;
+    height:100%;
+    opacity: 0.54;
+    filter: alpha(opacity=54);
+    background:#000;
+    z-index:5;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 10000
+}
+.guide-l-hint{
+    z-index: 10010;
+    position: absolute;
+    bottom:75px;
+    right:12px;
+    background:white;
+    border-radius: 5px;
+    padding:9px 12px;
+    color:$color-21;
+    .g-l-arrow{
+        color:white;
+        position:absolute;
+        right: 30px;
+        bottom: -15px;
+    }
+    .fake-icon{
+        color: #FF5722;
+        position: absolute;
+        right: 26px;
+        bottom: -38px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+};

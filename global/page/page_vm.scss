@@ -1,0 +1,51 @@
+/*
+* @Author: yuqy
+* @Date:   2016-06-14 20:34:18
+* @Last Modified by:   yuqy
+* @Last Modified time: 2016-06-14 20:35:38
+*/
+
+// 公用 使用vm complexPage方法的分页样式
+
+.Page {
+    clear: both;
+    height: 32px;
+    word-spacing: 6px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Page a,
+.Page i {
+    padding: 0 7px;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 16px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 2px
+}
+
+.Page a:hover {
+    border-color: #686e71
+}
+
+.Page i {
+    cursor: default
+}
+
+.Page .act {
+    color: #e84a01;
+    border-color: #e84a01
+}
+
+.Page .out {
+    border: 0
+}
+
+.Page .iconfont:hover {
+    color: #686e71;
+}

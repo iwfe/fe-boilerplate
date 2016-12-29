@@ -1,0 +1,87 @@
+<div class="mod-video">
+    <div class="video-loading"><img class="loading-img" src="{{loadingImg}}" /></div>
+    {{if hasVideo}}
+    <div class="video-wrap CMVideo-wrp">
+        <div class="video-player-wrap">
+            {{if !isFlash}}
+            <video class="video-player" {{if poster}}poster="{{poster}}" {{/if}} preload="preload" width="100%" height="100%">
+                <source class="video-source" src="{{initSrc}}" type='video/mp4'>
+            </video>
+            {{/if}}
+        </div>
+
+        <div class="video-error"></div>
+        {{if !isMobile}}
+        <div class="video-replay">
+            <i class="iconfont if-player-replay"></i>
+            <div>重新播放</div>
+        </div>
+        <div class="video-big-play"><img class="big-play-img" src="{{bigPlayImg}}"></div>
+        <div class="video-tip"></div>
+        <div class="video-control-wrap {{if doorModel.bool}}has-doormodel{{/if}}">
+            <div class="control-gradient-bottom"></div>
+            <div class="video-control-left">
+                <div class="video-play iconfont if-player-play"></div>
+                <div class="video-progress-wrap">
+                    <div class="video-load-progress-bg"></div>
+                    <div class="video-load-progress"></div>
+                    <div class="video-play-progress"></div>
+                    <div class="video-play-progress-pin iconfont if-circle1"></div>
+                </div>
+                <div class="video-time-wrap">
+                    <span class="video-time-current">00:00</span>
+                    <span class="video-time-divide">/</span>
+                    <span class="video-time-total">00:00</span>
+                </div>
+            </div>
+
+            <div class="video-control-right">
+                {{ if ifChangeVideo }}
+                <div class="change-video change-video-cm">
+                    <div class="change-video-tips">已为你跳转普通播放模式，你可以手动切换至全景模式
+                        <span class="arrow-bottom"></span>
+                    </div>
+                </div>
+                {{/if}}
+                {{if src.hd || src.sd || src.sp}}
+                <div class="video-definition">
+                    <span class="text">
+                    {{if initDef == 'sp'}}超清{{/if}}
+                    {{if initDef == 'hd'}}高清{{/if}}
+                    {{if initDef == 'sd'}}流畅{{/if}}
+                    </span>
+                    <div class="video-definition-box hide">
+                        {{if src.sp}}
+                        <span class="video-super-definition  {{if initDef == 'sp'}}active{{/if}}" data-type="sp">超清</span>
+                        {{/if}}
+                        {{if src.hd}}
+                        <span class="video-high-definition  {{if initDef == 'hd'}}active{{/if}}" data-type="hd">高清</span>
+                        {{/if}}
+                        {{if src.sd}}
+                        <span class="video-low-definition  {{if initDef == 'sd'}}active{{/if}}" data-type="sd">流畅</span>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/if}}
+                <div class="video-voice-wrap">
+                    <span class="video-voice-txt iconfont if-player-volume-up"></span>
+                    <div class="video-volume">
+                        <div class="video-volume-wrap">
+                            <div class="video-volume-bg"></div>
+                            <div class="video-volume-progress"></div>
+                            <div class="video-volume-pin iconfont if-circle1"></div>
+                        </div>
+                    </div>
+                </div>
+                {{if doorModel.bool}}
+                <div class="iconfont if-video-huxing"></div>
+                {{/if}}
+                <div class="video-fullscreen iconfont if-player-full-screen"></div>
+            </div>
+            {{else}}
+            <div class="video-big-play"><img class="big-play-img" src="{{bigPlayImg}}"></div>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+</div>

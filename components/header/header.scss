@@ -1,0 +1,651 @@
+@import 'sass/module/badge.scss';
+$minBodyWidth: 1190px !default;
+$headHeight: 48px !default;
+$fontColor: #686e71 !default;
+$headBgColor: #fff !default;
+$radius: 2px !default;
+$shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+$co-red:#e84a01 !default;
+$red: #FF001F;
+body {
+    min-width: $minBodyWidth;
+}
+
+.mod-header {
+    position: relative;
+    color: $fontColor;
+    background-color: $headBgColor;
+    box-shadow: $shadow;
+    z-index: 998;
+    border-bottom: 1px solid #ddd \9;
+}
+//公用气泡样式：红底白字，超过99椭圆形
+// %badge-num-com {
+//     width: 17px;
+//     height: 17px;
+//     border-radius: 50%;
+//     background: $red;
+//     color: #fff;
+//     text-align: center;
+//     line-height: 19px;
+//     font-size: 12px;
+//     padding: 1px;
+//     &.ellipse-num {
+//         width: 28px;
+//         border-radius: 9px
+//     }
+// }
+
+%nav-down-wrap-com {
+    .nav-down-wrap {
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        left: -32px;
+        z-index: 980;
+        top: 44px;
+        border: 1px solid #e4e4e4;
+        border-radius: $radius;
+        box-shadow: $shadow;
+        display: none;
+        padding: 8px 0;
+        &.trip-down-wrap {
+            min-width: 116px;
+            left: 50%;
+            margin-left: -58px;
+            .user-item {
+                &.appoint-list {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+%user-down-wrap-com {
+    .user-down-wrap {
+        min-width: 128px;
+    }
+}
+
+%nav-item-com {
+    .nav-item {
+        position: relative;
+        float: left;
+        height: 45px;
+        &:hover .nav-down-wrap {
+            display: block
+        }
+    }
+}
+
+%nav-down-item {
+    white-space: nowrap;
+    color: #757575;
+    font-size: 14px;
+}
+
+%user-item-com {
+    .user-item {
+        @extend %nav-down-item;
+        white-space: nowrap;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+        border-top: 1px solid #f7f7f7;
+        text-align: left;
+        padding-left: 16px;
+        // text-indent: 16px;
+        &:first-child {
+            border: none;
+            // margin-top: 8px;
+        }
+        .user-num {
+            color: #fff;
+            @extend %badge-num-com;
+            position:relative;
+            display: inline-block;
+            left: 2px;
+            top: -1px;
+        }
+    }
+}
+
+.user-item-hover {
+    background: #f5f5f5;
+    color: $co-red;
+}
+
+%nav-item-a-com {
+    .nav-item-a {
+        position: relative;
+        display: block;
+        height: 100%;
+        padding: 0 10px;
+        color: #212121;
+        &.active {
+            color: $co-red;
+            text-decoration: none;
+            border-bottom: 3px solid $co-red;
+            font-weight: bold;
+        }
+    }
+}
+/*地图页头部右侧靠右*/
+.map-header .header-wrap{
+    margin: 0 0 0 40px;
+    min-width:1280px;
+    width: auto;
+    .header-right {
+        right: 24px;
+    }
+}
+
+.header-wrap {
+    position: relative;
+    line-height: $headHeight;
+    height: $headHeight;
+    margin: 0 auto;
+    padding-top: 16px;
+    min-width: $minBodyWidth;
+    width: 1190px;
+    @extend %nav-down-wrap-com;
+    @extend %user-down-wrap-com;
+    @extend %nav-item-com;
+    @extend %nav-item-a-com;
+    @extend %user-item-com;
+    a {
+        display: block;
+        color: $fontColor;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .message-down-wrap a {
+        color: #212121;
+    }
+    .iconfont {
+        display: inline-block;
+    }
+    .city-item {
+        @extend %nav-down-item;
+        height: 32px;
+        line-height: 32px;
+        padding-left: 18px;
+    }
+    .city-item:hover,
+    .user-item:hover {
+        @extend .user-item-hover;
+    }
+
+    .ailicai-bubble {
+        position: absolute;
+        left: 40px;
+    }
+    .header-new {
+        // background: url('../../index/img/index.bg.png') no-repeat;
+        background-position: -312px 0;
+        width: 36px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: 34px;
+    }
+}
+
+.header-left {
+    .nav-item:hover {
+        border-bottom: 3px solid #d0d0d0;
+    }
+    .logo {
+        position: relative;
+        float: left;
+        padding: 0 8px 0 0;
+        margin-top: 10px;
+        width: 152px;
+        top: -6px;
+
+        .logo-img {
+            width: 100%;
+            display: block;
+        }
+    }
+    .nav-item{
+        .active{
+            .if-mobile{
+                color: $cl-iwjw-base;
+            }
+        }
+        .if-mobile{
+            color: #968E7B;
+            top: -1px;
+        }
+    }
+    .logo-line {
+        position: absolute;
+        height: 18px;
+        border-left: 1px solid #ccc;
+        top: 15px;
+    }
+    .city {
+        width: 72px;
+        min-width: 72px;
+        margin-right: 35px;
+
+        &.none {
+            width: 60px;
+        }
+        &:hover {
+            border-bottom: 0;
+        }
+        .iconfont {
+            right: 8px;
+            // top: 0;
+            font-size: 12px;
+            width: 12px;
+            color: #f16d2f;
+            position: absolute;
+        }
+        .province {
+            height: 28px;
+            line-height: 28px;
+            padding: 0 24px 0 8px;
+            font-size: 18px;
+            border-radius: $radius;
+            margin: 10px 0;
+            color: #424242;
+        }
+        .wrap-iframe {
+            box-shadow: none;
+        }
+    }
+}
+
+.header-right {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    .mine {
+        color: #4a4a4a;
+    }
+    .nav-item-a {
+        text-align: center;
+        padding: 0;
+        margin-left: 12px;
+        color: #4a4a4a;
+        &.active {
+            border-bottom: none;
+        }
+        &.login {
+            margin-left: 0;
+        }
+        &:hover {
+            color: $co-red;
+            /*解决地图页的爱心样式被覆盖*/
+            .if-favourite{
+                color: $co-red;
+            }
+        }
+        .iconfont {
+            margin-right: 2px;
+            top: -1px;
+        }
+        .user-num {
+            @extend %badge-num-com;
+            top: -1px;
+            left: 2px;
+            position:relative;
+            display: inline-block;
+            &.hide {
+                display: none;
+            }
+        }
+        .schedule-icon {
+            font-size: 18px;
+            position: relative;
+            top: -3px;
+        }
+        &.message {
+            .msg-badge {
+                @extend %badge-num-com;
+                position: relative;
+                display: inline-block;
+                top:-1px;
+                left:2px;
+            }
+        }
+    }
+    .message-nav .nav-item-txt{
+        border-right: none;
+        position: relative;
+    }
+    .nav-item-txt{
+        padding-right:12px;
+        border-right: 1px solid #bdbdbd;
+    }
+    .login {
+        .fo-arrow {
+            font-size: 12px;
+            margin-left: 4px;
+        }
+        &.none {
+            color: #e84a01;
+            &:hover {
+                color: #f16d2f;
+            }
+        }
+    }
+    .mid-dot {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+    .shape-circle {
+        position: relative;
+        display: inline-block;
+        margin-left: 2px;
+        top: -8px;
+        // left: -6px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #E74900;
+        &.hide {
+            display: none;
+        }
+    }
+}
+
+/*二手房新房地图的header-right*/
+.mod-head {
+    .header-right {
+        @extend %nav-down-wrap-com;
+        @extend %user-down-wrap-com;
+        @extend %nav-item-com;
+        @extend %nav-item-a-com;
+        @extend %user-item-com;
+        .nav-item {
+            line-height: 45px;
+            &:hover .cart-tips {
+                display: block;
+            }
+        }
+        .nav-item-a {
+            padding: 0 4px;
+        }
+        .user-item {
+            display: block;
+            &:hover {
+                @extend .user-item-hover;
+            }
+        }
+        .nav-down-wrap {
+            &.trip-down-wrap {
+                left: -44px;
+            }
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        &.map-mine {
+            right: 20px;
+        }
+        .cart-tips {
+            display: none;
+            position: absolute;
+            top: 40px;
+            white-space: nowrap;
+            z-index: 100;
+            width: 84px;
+            right: -24px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 2px;
+            border: 0;
+            background: #000;
+            background: rgba(33, 33, 33, 0.8);
+            color: #fff;
+            &:after {
+                border-bottom-color: #4C4C4C;
+                border-width: 8px;
+                margin-left: -8px;
+            }
+            &.cart-tips-message {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+/*卡券弹窗css*/
+.send-coupon {
+    .card-img {
+        width: 380px;
+        height: 188px;
+        background: url('./img/card.jpg') center;
+    }
+    .card-slogan {
+        font-size: 16px;
+        margin-top: 32px;
+        text-align: center;
+        color: #666;
+        .strong {
+            color: #e84a01;
+        }
+    }
+    .sweep-code {
+        margin-top: 12px;
+        text-align: center;
+        .sweep-tips {
+            color: #757575;
+        }
+        .qr-code {
+            width: 133px;
+            height: 133px;
+            margin: 12px auto 32px;
+            // background: url('../global/img/QRcode134.jpg') no-repeat center;
+        }
+        .qrcode-img{
+            width: 100%;
+        }
+    }
+}
+
+
+/*注册成功送卡券动画css*/
+.animated {
+    -webkit-animation-duration: 300ms;
+    animation-duration: 300ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/*佣金8折活动样式*/
+.act-wrap{
+    padding-bottom: 24px;
+    text-align: center;
+    .act-img-wrap{
+        width: 376px;
+        height: 192px;
+        .act-img{
+            width: 100%;
+            height: 100%;
+            background: url(./img/discount.jpg) center no-repeat;
+        }
+    }
+    .act-text{
+        font-size: 18px;
+        margin-top: 24px;
+
+    }
+    .swap-app{
+        margin-top: 4px;
+        color: #757575;
+        font-size: 16px;
+    }
+    .qrcode-wrap{
+        margin-top: 16px;
+        width:140px;
+        height: 140px;
+        margin: 16px auto 0;
+        .act-qr-code{
+            width:100%;
+        }
+    }
+}
+
+.map-mine,
+.list-mine {
+    &.header-right .nav-item-a {
+        margin-left: 0;
+        padding: 0 6px;
+    }
+}
+
+
+/*消息合并微聊后样式 prd/5.6*/
+.mod-head .header-right .message-down-wrap {
+    width: 320px;
+    left: -270px;
+    padding: 0;
+    &.arrow-top:after,
+    &.arrow-top:before {
+        left: 88%;
+    }
+}
+
+.header-right {
+    .nav-message-wrap {
+        height: 100%;
+    }
+    .message-down-wrap {
+        padding: 0;
+        right: -10px;
+        left: auto;
+        width: 320px;
+        // height: 800px;
+        // overflow: scroll;  scroll或者hidden会导致arrow-top不见了
+        position: absolute;
+        &.arrow-top:after,
+        &.arrow-top:before {
+            left: 92%;
+        }
+    }
+    .message-list-wrap {
+        position:relative;
+        height: auto;
+        min-height:75px;
+        max-height:302px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .msg-center-wrap{
+        width: 320px;
+    }
+    .msg-center-a {
+        padding: 16px;
+        position: relative;
+        display: block;
+        background: #fff;
+        // border-bottom: 1px solid #dedede;
+        &:hover {
+            background: #f7f7f7;
+        }
+    }
+    .bell-bg {
+        background: #F26929;
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        color: #fff;
+        margin-right: 16px;
+        text-align: center;
+        line-height: 42px;
+    }
+    .if-bell {
+        font-size: 21px;
+    }
+    .msg-center-tt {
+        font-size: 16px;
+        line-height: 24px;
+        position: relative;
+        top: 10px;
+    }
+    .msg-num {
+        @extend %badge-num-com;
+        position: absolute;
+        top: 16px;
+        right: 24px;
+    }
+    // .scrollbar {
+    //     position: absolute;
+    //     background-position: 0 0;
+    //     width: 8px;
+    //     right: 1px;
+    //     z-index: 10;
+    // }
+    // .track {
+    //     width: 6px;
+    //     position: relative;
+    //     padding: 0 1px;
+    //     height: 100%;
+    // }
+    // .thumb {
+    //     background: #ccc;
+    //     width: 6px;
+    //     height: 20px;
+    //     cursor: pointer;
+    //     overflow: hidden;
+    //     position: absolute;
+    //     border-radius: 6px;
+    //     top: 0;
+    // }
+    // .viewport {
+    //     width: 100%;
+    //     overflow: hidden;
+    //     right: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     top: 0;
+    //     position: absolute;
+    // }
+    // .overview {
+    //     right: 0;
+    //     padding: 0;
+    //     margin: 0;
+    //     position: absolute;
+    // }
+    // .disable {
+    //     display: none;
+    // }
+}

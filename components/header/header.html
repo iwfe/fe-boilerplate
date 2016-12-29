@@ -1,0 +1,55 @@
+<div class="nav-item">
+    <a {{if !user || !user.uname}}href='#'{{else}}data-url='/userinfo/'{{/if}} class="login {{if !user || !user.uname}}none{{/if}} nav-item-a login-require {{if flag == 24 || flag == 25 || flag == 26 || flag == 34 || flag == 35}}active{{/if}}" target="_blank">
+        {{if user && user.uname}}
+            {{if flag==35}}
+                <em class="iconfont if-avatar"></em><i class="nav-item-txt">我的</i>
+            {{else}}
+                <em class="iconfont if-login-register"></em><i class="nav-item-txt">我的</i>
+            {{/if}}
+        {{else}}
+            <em class="iconfont if-login-register"></em><i class="nav-item-txt">登录/注册</i>
+        {{/if}}
+    </a>
+    {{if user && user.uname}}
+        {{#mineDown}}
+    {{/if}}
+</div>
+
+<div class="nav-item">
+    <a id = "FollowDynamic" data-url="/collectHouseList/" class="login-require nav-item-a j-collect-list {{if flag == 32}}active {{/if}}">
+        {{if flag == 32}}
+        <i class="iconfont if-heart"></i>
+        {{else}}
+        <i class="iconfont if-favourite"></i>
+        {{/if}}
+        <i class="nav-item-txt">
+            <i class="">关注列表</i>{{if user.ifHaveDy}}<span class="shape-circle"></span>{{/if}}
+        </i>
+    </a>
+</div>
+
+<div class="nav-item">
+    <a data-url="/seeHouseList/" id="Itinerary" class="login-require nav-item-a see-list {{if flag == 6 || flag == 7}}active{{/if}}">
+        {{if flag == 6 || flag == 7}}
+        <i class="iconfont schedule-icon if-appoint-schedule"></i>
+        {{else}}
+        <i class="iconfont schedule-icon if-cart-hollow"></i>
+        {{/if}}
+        <i class="nav-item-txt">
+            <i class="">看房行程</i>
+            {{if user.ykNum > 0}}
+            <span class="user-num">{{user.ykNum}}</span>
+            {{else if user.kfNum > 0}}
+            <span class="shape-circle"></span>
+            {{/if}}
+        </i>
+    </a>
+    {{#tripDown}}
+</div>
+<!-- {{if noticeNums > 0 }}{{/if}} -->
+<div class="nav-item message-nav" id = "message-nav">
+</div>
+
+
+
+

@@ -1,0 +1,55 @@
+/*
+* @Author: zhuxy
+* @Date:   2015-08-07 16:25:23
+* @Email:  zhuxinyong.sh@superjia.com
+* @Last Modified by:   zhuxy
+* @Last Modified time: 2015-08-12 16:08:03
+*/
+
+.mod-page {
+    clear: both;
+    height: 32px;
+    text-align: center;
+    font-size: 0px;
+}
+
+.mod-page .page-item,
+.mod-page i {
+    padding: 0 7px;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 16px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.mod-page .page-item{
+    cursor: pointer;
+    color: #212121;
+    outline: 0 none;
+}
+.mod-page .page-item:hover {
+    border-color: #686e71
+}
+
+.mod-page i {
+    cursor: default
+}
+
+.mod-page .act {
+    color: #e84a01;
+    border-color: #e84a01
+}
+
+.mod-page .out {
+    border: 0
+}
+
+.mod-page .iconfont:hover {
+    color: #686e71;
+}

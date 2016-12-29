@@ -1,0 +1,68 @@
+#IWJWplayer-FD.FD-fullscreen{
+    position: fixed;
+
+    .video-player-fullclose{
+        display: block;
+    }
+}
+
+#IWJWplayer-FD {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: none;
+}
+
+.chrome-shadow{
+    height: 36px;
+    padding: 0 12px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -161px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+ 
+.chrome-shadow a{
+    color: #E84A01;
+}
+ 
+.chrome-shadow-text{
+    position: relative;
+    z-index: 1;
+}
+ 
+.chrome-shadow-bg{
+    background: #000;
+    opacity: 0.56;
+    filter: Alpha(opacity=56);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.load-fullvideo-btn{
+    height: 66px;
+    width: 66px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -33px;
+    margin-left: -33px;
+}
+
+.load-fullvideo-icon{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,198 @@
+$color-61:#616161;
+$color-e8:#E84A01;
+$color-de:#dedede;
+/*户型图尺寸*/
+$s-w:180;
+$s-h:120;
+$s-b-w:342;
+$s-b-h:228;
+
+$b-w:288;
+$b-h:192;
+$b-b-w:540;
+$b-b-h:360;
+
+// 户型图默认尺寸为180*120dp，（全屏模式下户型图尺寸为288*192dp），点击放大图标，则户型图尺寸变为342*228dp，（全屏模式尺寸为540*360dp）
+
+// .video_model-sprite, .video_model-magnifier, .video_model-small-magnifier {
+//   background-image: url('./video_model-sprite.png');
+//   background-repeat: no-repeat;
+// }
+
+// .video_model-magnifier {
+//   background-position: 0 0;
+// }
+
+// .video_model-small-magnifier {
+//   background-position: 0 -16px;
+// }
+
+
+
+/*小图模式由css来实时控制*/
+#imgSlide{
+    #J_door_model_container{
+        z-index:1000;
+        // transition: all .3s ease-in;
+        // -webkit-transition: all .05s ease-in; /* Safari 和 Chrome */
+        &.small{
+            bottom:80px;
+            right:0;
+        }
+        &.big{
+            right:(614-$s-b-w)/2+px;
+            bottom:(410-$s-b-h)/2+px
+        }
+        .house-layout-s-c{
+            &.small{
+                width:$s-w + px;
+                height:$s-h + px;
+                bottom:0;
+                right:0
+            }
+            &.big{
+                width:$s-b-w + px;
+                height:$s-b-h + px;
+                bottom:0;
+                right:0
+            }
+        }
+    }
+}
+#imgSlide .ie8-fullscreen{
+     bottom:-30px;
+}
+/*大图模式动画由jquery animate来实时控制*/
+.responsive-slider,
+#imgSlide {
+    .ie8-fullscreen,.FD-fullscreen,.slide-content-wrap{
+        #J_door_model_container{
+             z-index:1000;
+            /*控制容器位置*/
+            &.big{
+                bottom: 50%;
+                right: 50%;
+                margin-right:-$b-b-w/2+px;
+                margin-bottom:-$b-b-h/2+px
+            }
+            /*全屏下的小图模式增加25px*/
+            &.small{
+                right:0;
+                // bottom: 48px;
+                bottom:90px;
+            }
+            /*控制显示大小*/
+            .house-layout-s-c{
+                &.small{
+                    width:$b-w+px;
+                    height:$b-h + px;
+                    bottom:0;
+                    right:0;
+                }
+                /*父容器居中显示*/
+                &.big{
+                    width:$b-b-w+px;
+                    height:$b-b-h+px;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+#J_door_model_container{
+        position:absolute;
+        .house-layout-s-c{
+            position:absolute;
+            text-align: center;
+            display: block;
+            line-height: 100%;
+            right:0;
+            z-index:99;
+            .s-c-magnifier{
+                display: none;
+            }
+            .s-c-close{
+                display: none;
+            }
+            &:hover{ /*仅仅当hover的时候才出现*/
+                 .s-c-mask{
+                    opacity:0.26;
+                    background:black;
+                    width:100%;
+                    height:100%;
+                    z-index:1;
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    cursor: pointer;
+                    filter: alpha(opacity=26);
+                 }
+                 .s-c-magnifier{
+                    cursor: pointer;
+                    display: block;
+                    position:absolute;
+                    bottom:0;
+                    right:0;
+                    background:$color-61;
+                    width:24px;
+                    height:24px;
+                    text-align:center;
+                    line-height: 1;
+                    z-index:1000;
+                    &:hover{
+                        background:$color-e8
+                    }
+                    .s-c-m-img{
+                        position:absolute;
+                        top:4px;
+                        left:4px;;
+                        width:16px;
+                        height:16px;
+                        background-image: url('./video_model-sprite.png');
+                        background-repeat: no-repeat;
+                        &.magifier-small{
+                             background-position: 0 0;
+                        }
+                        &.magifier-big{
+                             background-position: 0 -16px;
+                        }
+                    }
+                }
+                .s-c-close{
+                    cursor: pointer;
+                    display: block;
+                    position: absolute;
+                    top:8px;
+                    right:8px;
+                    color:white;
+                    width: 16px;
+                    height: 16px;
+                    z-index:1000;
+                    &:hover{
+                        color:$color-de
+                    }
+                }
+            }
+            .s-c-img-wrapper{
+                z-index:10;
+                cursor:pointer;
+            }
+            .react-img-wrap{
+                text-align: center;
+                img{
+                    opacity: 0.8
+                }
+            }
+            .s-c-img{
+                max-height:100%;
+                max-width: 100%;
+                opacity: 0.8;
+                filter: alpha(opacity=80);
+                position: relative;
+                z-index: 100;
+                cursor: pointer;
+            }
+        }
+}
+

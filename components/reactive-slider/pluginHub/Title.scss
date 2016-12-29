@@ -1,0 +1,29 @@
+.s-t-container {
+    position: absolute;
+    top:0;
+    z-index: 18;
+    font-size:18px;
+    color:#fff;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.6)),color-stop(0%, rgba(0, 0, 0, 0)));
+    // background: -webkit-linear-gradient(top,rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0) 0%);
+    // background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.3),transparent );
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    filter:alpha(opacity=50);
+    background-color:#000\9;
+
+    text-align: center;
+    .s-t-c-title{
+        margin-right:8px;
+    }
+}
+.ie8-fullscreen .mod-video .video-control-wrap {
+    bottom: 0px !important;
+}

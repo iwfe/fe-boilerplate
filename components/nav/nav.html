@@ -1,0 +1,18 @@
+<div class="layout">
+    <div class="iwjw-left">
+        <div class="mod-nav {{navClass}}">
+            <div class="nav-label hide j-nav-label">
+            </div>
+            <ul class="nav-menu">
+                {{each data as item}}
+                <li class="left-nav-item nav-{{item.key}} {{if filter == item.key}}active{{/if}}">
+                    {{if item.url}}<a class="left-nav-a" href="{{item.url}}">{{else}}
+                        <a class="left-nav-a">
+                    {{/if}}
+                    <i class="iconfont left-nav-icon {{item.iconClass}}">{{item.icon}}</i>{{item.txt}}{{#item.extendTpl}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="iwjw-right"></div>
+</div>

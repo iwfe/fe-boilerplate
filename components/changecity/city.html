@@ -1,0 +1,10 @@
+<ul class="city-list clearfix">
+    {{each citys}}
+    <li class="city-item {{if $value.pid == currentCityId}}active{{/if}}" data-pid='{{$value.pid}}' data-pinyin="{{$value.pinyin}}">
+        <div class="item-wrap">
+            <a href="">{{$value.pname}}</a>
+            <i class="iconfont">&#xd423;</i>
+        </div>
+    </li>
+    {{/each}}
+</ul>
