@@ -3,6 +3,9 @@
 # 架构目录结构
 
 |- build 构建目录
+|- |- config_folder 提供给webpack的entry/alias/plugins配置
+|- |- gulp4 gulp4任务文件夹
+|- |- plugins gulp4及webpack插件
 |- components 组件
 |- deploy 上线部署和nginx相关配置
 |- global 全局组件
@@ -11,6 +14,8 @@
 |- |- log 日志
 |- |- iwjw 爱屋相关的全局工具
 |- business 业务模块文件夹
+|- |- static_pages 静态性质的页面
+|- |- 其余页面
 
 ## 命令
 
