@@ -37,8 +37,4 @@
 
 ```
 
-## usage[说明]
-
-- 所有components文件夹的东西，将在webpack打包时，自动添加别名```alias```和```components```目录名称
-- webpack.conf.js的ModuleAlias仅仅用于打包 ```global/lib```，非```components```下的公有组件相关
 
