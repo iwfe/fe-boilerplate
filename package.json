@@ -1,20 +1,20 @@
 {
-  "name": "iwfe",
+  "name": "fe-boilerplate",
   "version": "0.0.0",
+  "description":"采用webpack + ES6 + babel6 + gulp4 最新技术构建的前端项目模板",
   "private": true,
   "scripts": {
-    "build": "gulp --gulpfile ./build/gulp4/build.js  --cwd ./ ",
-    "test": "gulp --gulpfile ./build/gulp4/prd-version.js  --cwd ./ ",
     "dev": "gulp --gulpfile ./build/gulp4/dev.js  --cwd ./ ",
+    "build": "gulp --gulpfile ./build/gulp4/build.js  --cwd ./ ",
+    "ftp": "node deploy/deploy.js ",
+
     "zipUpload": "gulp --gulpfile ./build/gulp4/build.js  --cwd ./ zipUpload --upload ",
     "upload": "gulp --gulpfile ./build/gulp4/build.js  --cwd ./ upload --upload ",
     "uglify": "gulp --gulpfile ./build/gulp4/build.js  --cwd ./ uglify --upload --watch ",
     "zip": "gulp --gulpfile ./build/gulp4/build.js  --cwd ./ zip ",
     "compass": "gulp --gulpfile ./build/gulp4/compass.js  --cwd ./ compass ",
     "info:test": "node ./build/gulp4/info.js --env test",
-    "info:beta": "node ./build/gulp4/info.js --env beta",
-    "dll": "webpack --config ./build/dll.config.js",
-    "comdll": "webpack --config ./build/comlib.dll.config.js"
+    "info:beta": "node ./build/gulp4/info.js --env beta"
   },
   "dependencies": {
     "art-template": "*",
@@ -82,7 +82,7 @@
     "webpack-notifier": "^1.3.0",
     "yargs": "*"
   },
-  "description": "爱屋吉屋PC主站",
+  "description": "webpack es6前端模板项目",
   "main": "",
   "repository": {
     "type": "git",

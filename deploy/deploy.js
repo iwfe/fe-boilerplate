@@ -4,16 +4,16 @@ const fs = require('fs');
 const exec =require('child_process').exec;
 let ip = '121.40.69.179',
     user = 'staticuser',
-    pwd = 'KS94X7EoS4Ik82dH',
-    version = '',
-    fileName = '';
-if(process.argv.length >= 3){
-    version = process.argv[2];
-    fileName = process.argv[3]
+    pwd = 'KS94X7EoS4Ik82dH';
+
+const argv = require('yargs').argv;
+
+let { version,fileName} = argv;
+if(!version || !fileName){
+    process.exit('1')
 }
 
 console.log('上传版本号---'+version+'\n文件名-------'+fileName)
-
 let textStr = `
     open ${ip} \n
     user  ${user}   ${pwd} \n
