@@ -1,7 +1,8 @@
 // webpack 插件配置
 
 
-var webpack = require("webpack"),
+var path = require('path'),
+    webpack = require("webpack"),
     CopyWebpackPlugin = require('copy-webpack-plugin'),
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
     WebpackNotifierPlugin = require('webpack-notifier'),
@@ -14,17 +15,9 @@ var ManifestPlugin = require('../plugins/manifest.js');
 var webpackPluginList =[
             new CopyWebpackPlugin([
                     {
-                        from :'html',
-                        to:'html'
-                    },
-                    {
                         context: 'global/img',
                         from: '**/*',
                         to:'img/common'
-                    },
-                    {
-                        from: 'img',
-                        to:'img'
                     },
                     {
                         from :'global/lib/es5-shim-sham.js'
@@ -38,17 +31,9 @@ var webpackPluginList =[
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',
-                template: 'template',
-                store: 'store',
                 _: 'underscore',
                 global: 'global',
-                smallnote: 'smallnote',
                 iwjw: 'iwjw',
-                iwim: 'iwim',
-                iwjwLog: 'iwjwLog',
-                router: 'router',
-                dialog: 'dialog',
-                header: 'header',
                 React: 'react',
                 ReactDOM: 'react-dom'
             }),
@@ -72,12 +57,12 @@ var webpackPluginList =[
               threadPool: happyThreadPool,
               loaders: [ 'css-loader?sourceMap&-convertValues' ]
             }),
-            // manifest上传方式配置，这边先不用 versionType==2
-            process.env['NODE_ENV']=='manifest'? new ManifestPlugin({
-                hashNum:7,
-                extractJsCss:true,
-                versionDir:['html'] //递归抽取html下面的，也要加版本号
-            }):null
+            // // manifest上传方式配置，这边先不用 versionType==2
+            // process.env['NODE_ENV']=='manifest'? new ManifestPlugin({
+            //     hashNum:7,
+            //     extractJsCss:true,
+            //     versionDir:['html'] //递归抽取html下面的，也要加版本号
+            // }):undefined
 ];
 
 var webpackLoaders = [

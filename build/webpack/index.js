@@ -1,13 +1,11 @@
 
 import { plugins,loaders } from './plugin_loader.js';
 
-
 var utils = require('./util'),
     extend = require('extend'),
     path= require('path'),
     configJSON = require('../config.json'),
     versionType = configJSON['versionType'];
-
 
 //静态页面打包入口, 自动加上business/static_pages目录
 var static_files= utils.add_prefix(require('../config_folder/static_files'),'./business/static_pages/');
@@ -27,10 +25,7 @@ var common={
         'jps',
         'iwjwLog',
         './global/module/reset.css',
-        './sass/base/index.scss',
-        'placeholder',
         './global/iconfont/iconfont.css',
-        './global/iwjw/iwjw.scss',
         'iwjw'
     ]
 };
